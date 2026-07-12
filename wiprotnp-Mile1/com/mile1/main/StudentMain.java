@@ -1,4 +1,4 @@
-package com.mile1.main;
+package com.mile1.main;g
 import com.mile1.bean.Student;
 import com.mile1.exception.*;
 import com.mile1.service.*;
