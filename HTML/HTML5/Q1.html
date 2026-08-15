@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms - HTML5 Attributes</title>
+</head>
+
+<body>
+
+    <!-- FORM 2: VISITOR INFORMATION -->
+    <div>
+
+        <h2>Visitors Information</h2>
+        <hr>
+
+        <form>
+
+            <table>
+
+                <tr>
+                    <td>Email Address:</td>
+                    <td>
+                        <input type="email"
+                               name="email"
+                               placeholder="Enter your email"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>User's Interest:</td>
+                    <td>
+                        <input type="checkbox"
+                               name="interest"
+                               value="research">
+                        Research
+
+                        <input type="checkbox"
+                               name="interest"
+                               value="purchase">
+                        Purchase
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Occupation:</td>
+                    <td>
+                        <select name="occupation" required>
+                            <option value="">Select one</option>
+                            <option>Student</option>
+                            <option>Employee</option>
+                            <option>Business</option>
+                            <option>Teacher</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Want us to send you junk emails?</td>
+                    <td>
+                        <input type="radio"
+                               name="junk"
+                               value="absolutely"
+                               required>
+                        Absolutely
+
+                        <input type="radio"
+                               name="junk"
+                               value="no">
+                        No way man
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- FORM 3: ONLINE REGISTRATION -->
+    <div>
+
+        <h2>Online Registration Form</h2>
+
+        <form>
+
+            <table>
+
+                <tr>
+                    <td>Username:</td>
+                    <td>
+                        <input type="text"
+                               name="username"
+                               placeholder="Enter username"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input type="password"
+                               name="password"
+                               placeholder="Enter password"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Confirm Password:</td>
+                    <td>
+                        <input type="password"
+                               name="confirmPassword"
+                               placeholder="Confirm password"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input type="text"
+                               name="name"
+                               placeholder="Enter your name"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio"
+                               name="gender"
+                               value="male"
+                               required>
+                        Male
+
+                        <input type="radio"
+                               name="gender"
+                               value="female">
+                        Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Address:</td>
+                    <td>
+                        <textarea name="address"
+                                  rows="5"
+                                  cols="25"
+                                  placeholder="Enter your address"
+                                  required></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Profession:</td>
+                    <td>
+                        <select name="profession" multiple required>
+                            <option>Student</option>
+                            <option>Teacher</option>
+                            <option>Engineer</option>
+                            <option>Doctor</option>
+                            <option>Business</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Register">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
