@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OnlineRead</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 30px;
+            background-color: white;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .buttons {
+            margin: 30px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #all {
+            background-color: white;
+        }
+
+        #kids {
+            background-color: darkblue;
+            color: white;
+        }
+
+        #teens {
+            background-color: green;
+            color: white;
+        }
+
+        #scientific {
+            background-color: lightblue;
+        }
+
+        #crime {
+            background-color: orange;
+        }
+
+        #horror {
+            background-color: red;
+            color: white;
+        }
+
+        #feedback {
+            background-color: gray;
+            color: white;
+        }
+
+        .font-buttons button {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>OnlineRead</h1>
+
+    <h2>Book Types</h2>
+
+    <div class="buttons">
+        <button id="all" onclick="changeBackground('white')">
+            All
+        </button>
+
+        <button id="kids" onclick="changeBackground('darkblue')">
+            Kids
+        </button>
+
+        <button id="teens" onclick="changeBackground('green')">
+            Teens
+        </button>
+
+        <button id="scientific" onclick="changeBackground('lightblue')">
+            Scientific
+        </button>
+
+        <button id="crime" onclick="changeBackground('orange')">
+            Crime
+        </button>
+
+        <button id="horror" onclick="changeBackground('red')">
+            Horror
+        </button>
+
+        <button id="feedback" onclick="showFeedback()">
+            Feedback
+        </button>
+    </div>
+
+    <h2>Comfort Font Size</h2>
+
+    <div class="font-buttons">
+        <button onclick="changeFontSize('30px')">Big</button>
+        <button onclick="changeFontSize('25px')">Medium</button>
+        <button onclick="changeFontSize('20px')">Small</button>
+        <button onclick="changeFontSize('16px')">Very Small</button>
+    </div>
+
+    <p id="text">
+        Welcome to OnlineRead. Choose a book category
+        and adjust the font size according to your comfort.
+    </p>
+
+    <script>
+        function changeBackground(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function changeFontSize(size) {
+            document.getElementById("text").style.fontSize = size;
+        }
+
+        function showFeedback() {
+            alert("Thank you for your feedback!");
+        }
+    </script>
+
+</body>
+</html>
