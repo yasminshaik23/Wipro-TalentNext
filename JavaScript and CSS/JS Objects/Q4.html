@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Sum</title>
+</head>
+<body>
+
+    <input type="text" id="num1" placeholder="Enter first number">
+    <br><br>
+
+    <input type="text" id="num2" placeholder="Enter second number">
+    <br><br>
+
+    <button onclick="calculateSum()">Calculate</button>
+
+    <script>
+        function calculateSum() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            alert("Sum = " + (a + b));
+        }
+    </script>
+
+</body>
+</html>

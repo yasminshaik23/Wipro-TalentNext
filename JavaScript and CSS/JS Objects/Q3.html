@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Characters</title>
+</head>
+<body>
+
+<script>
+    function removeCharacters(str, start, count) {
+        return str.substring(0, start) + str.substring(start + count);
+    }
+
+    let result = removeCharacters("Hello World", 5, 1);
+
+    document.write(result);
+</script>
+
+</body>
+</html>

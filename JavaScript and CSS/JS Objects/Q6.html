@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background</title>
+
+    <style>
+        a {
+            margin: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#" onclick="changeBackground('white')">White</a>
+    <a href="#" onclick="changeBackground('red')">Red</a>
+    <a href="#" onclick="changeBackground('blue')">Blue</a>
+    <a href="#" onclick="changeBackground('pink')">Pink</a>
+
+    <script>
+        function changeBackground(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+</html>
