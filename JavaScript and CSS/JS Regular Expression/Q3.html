@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validation</title>
+
+    <script>
+
+        function validatePassword(password) {
+
+            if (password.length < 6 || password.length > 20) {
+                return false;
+            }
+
+            if (!/[0-9]/.test(password)) {
+                return false;
+            }
+
+            if (!/[A-Z]/.test(password)) {
+                return false;
+            }
+
+            if (!/[a-z]/.test(password)) {
+                return false;
+            }
+
+            return true;
+        }
+
+
+        function checkPassword() {
+
+            let password = document.getElementById("password").value;
+
+            if (validatePassword(password)) {
+                alert("Password is valid");
+            } else {
+                alert("Invalid password");
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    Enter Password:
+    <input type="password" id="password">
+
+    <br><br>
+
+    <button onclick="checkPassword()">Check Password</button>
+
+</body>
+</html>
