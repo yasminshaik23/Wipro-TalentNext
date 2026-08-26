@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="flower.xsl"?>
+
+<FlowerDepot>
+
+    <Flower>
+        <Name>Rose</Name>
+        <Color>Red</Color>
+        <Price>10</Price>
+        <Availability>Yes</Availability>
+    </Flower>
+
+    <Flower>
+        <Name>Carnation</Name>
+        <Color>Yellow</Color>
+        <Price>15</Price>
+        <Availability>Yes</Availability>
+    </Flower>
+
+    <Flower>
+        <Name>Lily</Name>
+        <Color>White</Color>
+        <Price>25</Price>
+        <Availability>No</Availability>
+    </Flower>
+
+</FlowerDepot>

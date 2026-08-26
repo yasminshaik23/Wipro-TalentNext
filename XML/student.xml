@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<studentRegistration>
+    <name>Rahul</name>
+    <age>16</age>
+    <gender>Male</gender>
+    <course>C Programming</course>
+</studentRegistration>
