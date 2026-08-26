@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>State and Cities</title>
+
+    <script>
+        function getCities() {
+
+            var state = document.getElementById("state").value;
+
+            if (state === "") {
+                document.getElementById("result").innerHTML = "";
+                return;
+            }
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+
+                if (xhr.readyState === 4 && xhr.status === 200) {
+
+                    var cities = xhr.responseText.split(",");
+
+                    var table = "<table border='1'>";
+                    table += "<tr><th>City</th></tr>";
+
+                    for (var i = 0; i < cities.length; i++) {
+                        table += "<tr><td>" + cities[i].trim() + "</td></tr>";
+                    }
+
+                    table += "</table>";
+
+                    document.getElementById("result").innerHTML = table;
+                }
+            };
+
+            xhr.open("GET",
+                     "cities?state=" + encodeURIComponent(state),
+                     true);
+
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Select a State</h2>
+
+    <select id="state" onchange="getCities()">
+
+        <option value="">-- Select State --</option>
+
+        <option value="Andhra Pradesh">
+            Andhra Pradesh
+        </option>
+
+        <option value="Tamil Nadu">
+            Tamil Nadu
+        </option>
+
+        <option value="Karnataka">
+            Karnataka
+        </option>
+
+        <option value="Telangana">
+            Telangana
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <div id="result"></div>
+
+</body>
+</html>
