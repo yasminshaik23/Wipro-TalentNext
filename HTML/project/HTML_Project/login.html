@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+
+    <script type="text/javascript">
+
+        function validatePassword() {
+
+            var password = document.getElementById("password").value;
+
+            // Password should not be empty
+            if (password == "") {
+                alert("Password should not be empty");
+                return false;
+            }
+
+            // Minimum 6 characters
+            if (password.length < 6) {
+                alert("Password must contain at least 6 characters");
+                return false;
+            }
+
+            // At least one number and one uppercase letter
+            var pattern = /^(?=.*[0-9])(?=.*[A-Z]).{6,}$/;
+
+            if (!pattern.test(password)) {
+                alert("Password must contain at least one number and one uppercase letter");
+                return false;
+            }
+
+            alert("Login Successful");
+            return true;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <center>
+
+        <h2>Login Page</h2>
+
+        <form onsubmit="return validatePassword()">
+
+            <table>
+
+                <tr>
+                    <td>Enter User Name:</td>
+                    <td>
+                        <input type="text" name="username">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Enter Password:</td>
+                    <td>
+                        <input type="password" id="password" name="password">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="submit">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+        <br>
+
+        <a href="#">New User</a>
+
+    </center>
+
+</body>
+
+</html>

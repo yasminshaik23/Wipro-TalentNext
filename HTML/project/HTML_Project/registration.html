@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <center>
+
+        <h2>Registration Form</h2>
+
+        <form>
+
+            <table cellpadding="5">
+
+                <tr>
+                    <td>User Id:</td>
+                    <td>
+                        <input type="text"
+                               name="userid"
+                               minlength="4"
+                               maxlength="8"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <input type="password"
+                               name="password"
+                               pattern="(?=.*[0-9])(?=.*[A-Z]).{6,}"
+                               title="Password must contain at least 6 characters, one uppercase letter and one number"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Date Of Birth:</td>
+                    <td>
+                        <input type="date"
+                               name="dob"
+                               max="2026-08-30"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio"
+                               name="gender"
+                               value="Male"
+                               required> Male
+
+                        <input type="radio"
+                               name="gender"
+                               value="Female"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>State:</td>
+                    <td>
+                        <select name="state" required>
+                            <option value="">Select State</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Telangana</option>
+                            <option>Karnataka</option>
+                            <option>Tamil Nadu</option>
+                            <option>Kerala</option>
+                            <option>Maharashtra</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Contact Number:</td>
+                    <td>
+                        <input type="number"
+                               name="contact"
+                               min="1000000000"
+                               max="9999999999"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Address:</td>
+                    <td>
+                        <textarea name="address"
+                                  rows="5"
+                                  cols="30"
+                                  required></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="submit">
+                    </td>
+
+                    <td>
+                        <input type="reset" value="reset">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </center>
+
+</body>
+
+</html>

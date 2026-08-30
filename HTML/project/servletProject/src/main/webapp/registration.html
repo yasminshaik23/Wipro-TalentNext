@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New User Registration</title>
+
+    <script type="text/javascript">
+
+        function validateForm() {
+
+            var password = document.getElementById("password").value;
+            var confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+            // Password validation
+            var passwordPattern =
+                /^(?=.*[0-9])(?=.*[A-Z]).{6,}$/;
+
+            if (!passwordPattern.test(password)) {
+                alert("Password must contain at least 6 characters, one uppercase letter and one number");
+                return false;
+            }
+
+            // Confirm password validation
+            if (password != confirmPassword) {
+                alert("Password and Confirm Password must match");
+                return false;
+            }
+
+            // Contact number validation
+            var contact = document.getElementById("contact").value;
+
+            if (!/^[0-9]{10}$/.test(contact)) {
+                alert("Contact number must contain exactly 10 digits");
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+</head>
+
+<body>
+
+<center>
+
+    <h2>New User Registration</h2>
+
+    <form action="/servletProject/register"
+      method="post"
+      onsubmit="return validateForm()">
+
+        <table cellpadding="5">
+
+            <tr>
+                <td>User ID:</td>
+                <td>
+                    <input type="text"
+                           name="userid"
+                           minlength="4"
+                           maxlength="8"
+                           required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Confirm Password:</td>
+                <td>
+                    <input type="password"
+                           id="confirmPassword"
+                           required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth:</td>
+                <td>
+                    <input type="date"
+                           name="dob"
+                           max="2026-08-30"
+                           required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio"
+                           name="gender"
+                           value="Male"
+                           required>
+                    Male
+
+                    <input type="radio"
+                           name="gender"
+                           value="Female">
+                    Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>State:</td>
+                <td>
+                    <select name="state" required>
+
+                        <option value="">
+                            Select State
+                        </option>
+
+                        <option value="Andhra Pradesh">
+                            Andhra Pradesh
+                        </option>
+
+                        <option value="Telangana">
+                            Telangana
+                        </option>
+
+                        <option value="Karnataka">
+                            Karnataka
+                        </option>
+
+                        <option value="Tamil Nadu">
+                            Tamil Nadu
+                        </option>
+
+                        <option value="Kerala">
+                            Kerala
+                        </option>
+
+                        <option value="Maharashtra">
+                            Maharashtra
+                        </option>
+
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Contact Number:</td>
+                <td>
+                    <input type="text"
+                           id="contact"
+                           name="contact"
+                           maxlength="10"
+                           required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address:</td>
+                <td>
+                    <textarea name="address"
+                              rows="5"
+                              cols="30"
+                              required></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+
+                    <input type="submit"
+                           value="Register">
+
+                    <input type="reset"
+                           value="Reset">
+
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <br>
+
+    <a href="login.html">
+        Back to Login
+    </a>
+
+</center>
+
+</body>
+
+</html>
