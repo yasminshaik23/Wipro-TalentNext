@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XYZ Library - Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>XYZ Library Registration</h2>
+
+        <form id="registrationForm" method="post" action="register">
+
+            <label>Email:</label>
+            <input type="text" id="email" name="email"
+                   onblur="validateEmail()">
+            <span id="emailMessage"></span>
+
+            <br>
+
+            <label>Password:</label>
+            <input type="password" id="password" name="password">
+
+            <br>
+
+            <label>Name:</label>
+            <input type="text" id="name" name="name">
+
+            <br>
+
+            <label>Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <br>
+
+            <label>Gender:</label>
+            <select id="gender" name="gender">
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <br>
+
+            <label>Occupation:</label>
+            <input type="text" id="occupation" name="occupation">
+
+            <br>
+
+            <label>City:</label>
+            <input type="text" id="city" name="city">
+
+            <br>
+
+            <label>Mobile:</label>
+            <input type="text" id="mobile" name="mobile">
+
+            <br>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+        <p>
+            Already registered?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
+    <script src="js/register.js"></script>
+
+</body>
+</html>
