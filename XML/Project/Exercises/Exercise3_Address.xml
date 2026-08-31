@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<address
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Exercise8_Address.xsd">
+
+    <name>Manju</name>
+    <company>Wipro</company>
+    <phone>9988776655</phone>
+
+</address>

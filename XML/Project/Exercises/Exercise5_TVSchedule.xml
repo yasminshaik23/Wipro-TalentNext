@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE TVSCHEDULE [
+
+    <!ELEMENT TVSCHEDULE (CHANNEL+)>
+    <!ELEMENT CHANNEL (BANNER,DAY+)>
+    <!ELEMENT BANNER (#PCDATA)>
+    <!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>
+    <!ELEMENT HOLIDAY (#PCDATA)>
+    <!ELEMENT DATE (#PCDATA)>
+    <!ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION?)>
+    <!ELEMENT TIME (#PCDATA)>
+    <!ELEMENT TITLE (#PCDATA)>
+    <!ELEMENT DESCRIPTION (#PCDATA)>
+
+    <!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>
+    <!ATTLIST CHANNEL CHAN CDATA #REQUIRED>
+    <!ATTLIST PROGRAMSLOT VTR CDATA #IMPLIED>
+    <!ATTLIST TITLE RATING CDATA #IMPLIED>
+    <!ATTLIST TITLE LANGUAGE CDATA #IMPLIED>
+
+]>
+
+<TVSCHEDULE NAME="Weekly TV Schedule">
+
+    <CHANNEL CHAN="Channel 1">
+
+        <BANNER>Channel 1 Programs</BANNER>
+
+        <DAY>
+
+            <DATE>Monday</DATE>
+
+            <PROGRAMSLOT VTR="Yes">
+                <TIME>09:00</TIME>
+                <TITLE RATING="U" LANGUAGE="English">Morning News</TITLE>
+                <DESCRIPTION>Daily morning news and updates.</DESCRIPTION>
+            </PROGRAMSLOT>
+
+            <PROGRAMSLOT>
+                <TIME>18:00</TIME>
+                <TITLE RATING="U" LANGUAGE="English">Evening Show</TITLE>
+                <DESCRIPTION>Entertainment and interviews.</DESCRIPTION>
+            </PROGRAMSLOT>
+
+        </DAY>
+
+        <DAY>
+
+            <DATE>Tuesday</DATE>
+
+            <HOLIDAY>Public Holiday</HOLIDAY>
+
+        </DAY>
+
+    </CHANNEL>
+
+    <CHANNEL CHAN="Channel 2">
+
+        <BANNER>Channel 2 Programs</BANNER>
+
+        <DAY>
+
+            <DATE>Monday</DATE>
+
+            <PROGRAMSLOT>
+                <TIME>10:00</TIME>
+                <TITLE RATING="U" LANGUAGE="English">Educational Program</TITLE>
+                <DESCRIPTION>Educational content for students.</DESCRIPTION>
+            </PROGRAMSLOT>
+
+        </DAY>
+
+        <DAY>
+
+            <DATE>Wednesday</DATE>
+
+            <PROGRAMSLOT VTR="No">
+                <TIME>20:00</TIME>
+                <TITLE RATING="PG" LANGUAGE="English">Movie Night</TITLE>
+                <DESCRIPTION>Weekly movie program.</DESCRIPTION>
+            </PROGRAMSLOT>
+
+        </DAY>
+
+    </CHANNEL>
+
+</TVSCHEDULE>
