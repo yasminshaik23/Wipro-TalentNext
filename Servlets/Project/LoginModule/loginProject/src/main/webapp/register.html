@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New User Registration</title>
+
+    <script>
+        function validateRegistration() {
+
+            var password =
+                document.getElementById("password").value;
+
+            var retypePassword =
+                document.getElementById("retypePassword").value;
+
+            if (password === "" || retypePassword === "") {
+                alert("Password fields cannot be empty.");
+                return false;
+            }
+
+            if (password !== retypePassword) {
+                alert("Password and Retype Password should be same.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>New User Registration</h1>
+
+    <form action="register" method="post"
+          onsubmit="return validateRegistration()">
+
+        <label>Username:</label>
+        <input type="text" name="username" required>
+
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password"
+               name="password" required>
+
+        <br><br>
+
+        <label>Retype Password:</label>
+        <input type="password" id="retypePassword"
+               name="retypePassword" required>
+
+        <br><br>
+
+        <input type="submit" value="Add">
+
+    </form>
+
+    <br>
+
+    <a href="login.html">Back to Login</a>
+
+</body>
+</html>
